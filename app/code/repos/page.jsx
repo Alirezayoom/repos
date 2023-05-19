@@ -4,6 +4,7 @@ async function fetchRepos() {
   const response = await fetch(
     "https://api.github.com/users/alirezayoom/repos"
   );
+
   const data = await response.json();
   return data;
 }
