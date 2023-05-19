@@ -2,7 +2,8 @@ import Link from "next/link";
 
 async function fetchRepos() {
   const response = await fetch(
-    "https://api.github.com/users/alirezayoom/repos"
+    "https://api.github.com/users/alirezayoom/repos",
+    { next: { revalidate: 60 } }
   );
 
   const data = await response.json();

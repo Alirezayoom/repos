@@ -1,6 +1,7 @@
 async function fetchRepo(name) {
   const response = await fetch(
-    `https://api.github.com/repos/alirezayoom/${name}`
+    `https://api.github.com/repos/alirezayoom/${name}`,
+    { next: { revalidate: 60 } }
   );
 
   const repo = await response.json();
