@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 async function fetchRepoDirs(name) {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
   const response = await fetch(
     `https://api.github.com/repos/alirezayoom/${name}/contents`
   );
