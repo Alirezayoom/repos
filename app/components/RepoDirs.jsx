@@ -12,16 +12,17 @@ async function fetchRepoDirs(name) {
 }
 
 const RepoDirs = async ({ name }) => {
-  const contents = await fetchRepoDirs(name);
-  const dirs = contents.filter((content) => content.type === "dir");
+  const dirs = await fetchRepoDirs(name);
+  //   const dirs = contents.filter((content) => content.type === "dir");
 
   return (
     <div className="mt-6">
-      <h2 className="text-xl">Directories:</h2>
+      <h2 className="text-xl">Files & Directories:</h2>
       <ul>
         {dirs.map((dir) => (
           <li key={dir.path}>
-            <Link href={`/code/repos/${name}/${dir.path}`}>- {dir.path}</Link>
+            {/* <Link href={`/code/repos/${name}/${dir.path}`}>- {dir.path}</Link> */}
+            - {dir.path}
           </li>
         ))}
       </ul>
