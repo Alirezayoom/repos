@@ -12,8 +12,8 @@ const ReposPage = async () => {
   const repos = await fetchRepos();
   console.log(repos);
   return (
-    <div className="max-w-[40rem] mx-auto">
-      <h1 className="text-3xl text-center py-6">My Repositories</h1>
+    <div className="max-w-[40rem] mx-auto py-8">
+      <h1 className="text-3xl text-center mb-8">My Repositories</h1>
       <ul className="grid gap-4">
         {repos.map((repo) => (
           <li key={repo.id} className="bg-[#222] p-4">
