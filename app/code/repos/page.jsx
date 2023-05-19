@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 
 async function fetchRepos() {
   const response = await fetch(
@@ -18,7 +18,9 @@ const ReposPage = async () => {
         {repos.map((repo) => (
           <li key={repo.id} className="bg-[#222] p-4">
             <div className="flex justify-between items-center">
-              <h2 className="text-2xl">{repo.name}</h2>
+              <h2 className="text-2xl">
+                <Link href={`/code/repos/${repo.name}`}>{repo.name}</Link>
+              </h2>
               <div className="flex items-center gap-1 bg-[#333] text-white p-2 rounded-lg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
