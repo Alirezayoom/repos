@@ -3,7 +3,6 @@ import Image from "next/image";
 
 const pages = [
   { id: 1, link: "/about", name: "About" },
-  { id: 2, link: "/about/team", name: "Team" },
   { id: 3, link: "/code/repos", name: "Code" },
 ];
 
