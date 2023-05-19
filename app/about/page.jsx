@@ -3,7 +3,12 @@ export const metadata = {
 };
 
 const AboutPage = () => {
-  return <div>about</div>;
+  return (
+    <div className="max-w-[40rem] mx-auto my-8 p-4 bg-[#222]">
+      <h1 className="text-2xl mb-2">About:</h1>
+      <p>This is a list of my github repositories made with Next.js 13</p>
+    </div>
+  );
 };
 
 export default AboutPage;
